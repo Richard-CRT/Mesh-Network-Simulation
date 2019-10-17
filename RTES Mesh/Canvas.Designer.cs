@@ -28,7 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.TimerTick = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
+            // 
+            // TimerTick
+            // 
+            this.TimerTick.Enabled = true;
+            this.TimerTick.Interval = 1;
+            this.TimerTick.Tick += new System.EventHandler(this.TimerTick_Tick);
             // 
             // Canvas
             // 
@@ -37,10 +45,15 @@
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Name = "Canvas";
             this.Size = new System.Drawing.Size(148, 148);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Canvas_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Canvas_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Canvas_MouseUp);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Timer TimerTick;
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.canvas1 = new RTES_Mesh.Canvas();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // canvas1
@@ -36,14 +37,25 @@
             this.canvas1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.canvas1.Location = new System.Drawing.Point(12, 12);
             this.canvas1.Name = "canvas1";
-            this.canvas1.Size = new System.Drawing.Size(667, 397);
+            this.canvas1.Size = new System.Drawing.Size(413, 411);
             this.canvas1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(431, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // FormSimulation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(558, 435);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.canvas1);
             this.Name = "FormSimulation";
             this.Text = "RTES Mesh Simulation";
@@ -54,13 +66,8 @@
 
         #endregion
 
-        private Node node1;
-        private Node node2;
-        private Node node3;
-        private Node node4;
-        private Node node5;
-        private Node node6;
         private Canvas canvas1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

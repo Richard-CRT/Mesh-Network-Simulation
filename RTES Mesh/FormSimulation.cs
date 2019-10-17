@@ -22,5 +22,10 @@ namespace RTES_Mesh
         {
 
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            canvas1.Broadcast();
+        }
     }
 }
